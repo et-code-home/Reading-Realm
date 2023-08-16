@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
-    const Books = (setSelectedBook) => {
+    const Books = () => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
@@ -23,7 +23,7 @@ import { Link } from 'react-router-dom'
             {books.map(book => (
             <li key={book.id} >
                 <Link to={`/books/${book.id}`}>
-                    <strong>{book.title}</strong> by {book.author}
+                    <strong className='text-indigo-300'>{book.title}</strong> by {book.author}
                 </Link>
             </li>
             ))}
