@@ -8,9 +8,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App dark:text-white bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
         <header className="App-header">
-          <h1>Reading Realm</h1>
+          <h1 className='text-sky-300'>Reading Realm</h1>
           <Routes>
              <Route path='/' element={<Home />}></Route>
             <Route path='/books' element={<Books />}></Route>
