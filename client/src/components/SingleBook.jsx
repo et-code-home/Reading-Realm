@@ -5,6 +5,9 @@ import { useParams } from 'react-router-dom';
     const [book, setBook] = useState([]);
 
     let { id } = useParams();
+    if(id === 'surprise') {
+        id = Math.ceil(Math.random()*3);
+    }
 
     useEffect(() => {
         async function fetchBooks() {
